@@ -324,36 +324,24 @@
               <p>
                 Deploying embodied agents that can answer questions about their
                 surroundings in realistic real-world settings remains difficult,
-                partly due to the scarcity of benchmarks that faithfully capture
-                practical operating conditions. We propose infrastructure
-                inspection as a compelling domain for open-vocabulary Embodied
-                Question Answering (EQA): it naturally demands multi-scale
-                reasoning, long-range spatial understanding, and complex
-                semantic relationships, while offering unique evaluation
-                advantages via standardized National Bridge Inventory (NBI)
-                condition ratings (0- 9), professional inspection reports, and
-                egocentric imagery.
-              </p>
-              <p>
-                We introduce BridgeEQA, a benchmark of 2,200 openvocabulary
-                question-answer pairs (in the style of OpenEQA) grounded in
-                professional inspection reports across 200 real-world bridge
-                scenes with 47.93 images on average per scene. Questions require
-                synthesizing visual evidence across multiple images and aligning
-                responses with NBI condition ratings. We further propose a new
-                EQA metric Image Citation Relevance to evaluate the ability of a
-                model to cite relevant images.
-              </p>
-              <p>
+                partly due to the scarcity of benchmarks for episodic memory
+                Embodied Question Answering (EQA). Inspired by the challenges of
+                infrastructure inspections, we propose Inspection EQA as a
+                compelling problem class for advancing episodic memory EQA: it
+                demands multi-scale reasoning and long-range spatial
+                understanding, while offering standardized evaluation,
+                professional inspection reports as grounding, and egocentric
+                imagery. We introduce BridgeEQA, a benchmark of 2,200
+                open-vocabulary question-answer pairs (in the style of OpenEQA)
+                grounded in professional inspection reports across 200
+                real-world bridge scenes with 47.93 images on average per scene.
+                We further propose a new EQA metric Image Citation Relevance to
+                evaluate the ability of a model to cite relevant images.
                 Evaluations of state-of-the-art vision-language models reveal
-                substantial performance gaps under episodic memory EQA settings.
-                To address this, we propose Embodied Memory Visual Reasoning
-                (EMVR), which formulates inspection as sequential navigation
-                over an image-based scene graph: images are nodes, and an agent
-                takes actions to traverse views, compare evidence, and reason
-                within a Markov decision process. EMVR shows strong performance
-                over the baselines. We publicly release both the dataset and
-                code.
+                substantial performance gaps. To address this, we propose
+                Embodied Memory Visual Reasoning (EMVR), which formulates the
+                inspection EQA task as a Markov decision process. EMVR shows
+                strong performance over the baselines.
               </p>
             </div>
           </div>
