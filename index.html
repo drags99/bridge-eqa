@@ -273,6 +273,38 @@
 
     <section class="section">
       <div class="container is-max-desktop">
+        <img
+          src="./static/images/bridge-eqa.png"
+          style="width: 100%; display: block; margin-bottom: 1rem"
+        />
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <p class="content has-text-centered" style="font-size: larger">
+              <span style="font-weight: bold">BridgeEQA</span> consists of 2,200
+              open-vocabulary question-answer pairs grounded in professional
+              inspection reports across 200 real-world bridge scenes.
+            </p>
+            <p class="content has-text-centered" style="font-size: larger">
+              <span style="font-weight: bold">EMVR</span> outperforms baselines
+              on BridgeEQA by guiding agents to traverse scene graphs via MDP
+              and dynamically collecting visual evidence for question answering.
+            </p>
+          </div>
+        </div>
+        <div class="publication-video">
+          <iframe
+            style="margin-top: 64px"
+            src="https://www.youtube.com/embed/NpEaa2P7qZI?si=HLI40ruN_I7qYaAy"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Abstract</h2>
@@ -314,39 +346,98 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
       </div>
     </section>
 
     <section class="section">
       <div class="container is-max-desktop">
-        <div class="columns">
-          <h2 class="title is-2">BridgeEQA</h2>
+        <div class="column is-centered has-text-centered">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Embodied Memory Visual Reasoning</h2>
+              <h2 class="title is-3">(EMVR)</h2>
+              <img
+                src="./static/images/emvr.png"
+                style="
+                  display: flex;
+                  flex: 1;
+                  max-width: 100%;
+                  margin-top: 32px;
+                  margin-bottom: 32px;
+                "
+              />
+              <p class="content has-text-justified">
+                EMVR frames an agent's decision process as sequential navigation
+                and selective recall, enabling it to retrieve and prioritize
+                only the visual evidence needed to answer an inspection query.
+                The agent navigates a scene graph via an MDP, retrieving images
+                dynamically to bring only relevant information into context.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container is-max-desktop">
-        <div class="columns">
-          <h2 class="title is-2">EMVR</h2>
+        <div class="column is-centered has-text-centered">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Image Citation Relevance</h2>
+              <img
+                src="./static/images/image_citatation_relevance.png"
+                style="
+                  display: flex;
+                  flex: 1;
+                  max-width: 100%;
+                  margin-top: 32px;
+                  margin-bottom: 32px;
+                "
+              />
+              <p class="content has-text-justified">
+                Bridge inspectors justify condition ratings with photographic
+                evidence. Similarly, Image Citation Relevance evaluates whether
+                agents cite appropriate supporting images by semantically
+                comparing agent selections against a reference set. A
+                VLM-as-a-Judge receives the question, the ground truth answer,
+                reference images (as examples, not definitive ground truth), and
+                agent-selected images, then scores on a 0.0–1.0 scale while
+                penalizing over-selection in the event that an agent cites more
+                than 5 times the number of images in the reference set.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container is-max-desktop">
-        <div class="columns">
-          <h2 class="title is-2">Image Citation Relevance</h2>
+        <div class="column is-centered has-text-centered">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Results</h2>
+              <img
+                src="./static/images/results.png"
+                style="
+                  display: flex;
+                  flex: 1;
+                  max-width: 100%;
+                  margin-top: 32px;
+                  margin-bottom: 32px;
+                "
+              />
+              <p class="content has-text-justified">
+                <span style="font-weight: bold">EMVR VLM with SG Only</span> and
+                <span style="font-weight: bold">EMVR VLM with Images + SG</span>
+                significantly outperforms benchmarks on the BridgeEQA benchmark
+                in both <span style="font-weight: bold">within-one</span> and
+                <span style="font-weight: bold">exact match</span> condition
+                rating accuracy.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -368,24 +459,6 @@
 
     <footer class="footer">
       <div class="container">
-        <div class="content has-text-centered">
-          <a
-            class="icon-link"
-            target="_blank"
-            href="https://arxiv.org/abs/2011.12948"
-            class="external-link"
-          >
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a
-            class="icon-link"
-            href="https://github.com/keunhong"
-            target="_blank"
-            class="external-link"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
         <div class="columns is-centered">
           <div class="column is-8">
             <div class="content">
